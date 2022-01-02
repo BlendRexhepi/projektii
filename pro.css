@@ -109,6 +109,30 @@ header ul li a{
 .banner .imgBx img.active{
     opacity:1;
 }
+.contentBx{
+    position: absolute;
+    bottom: 0;
+    max-width: 700px;
+
+}
+.contentBx div{
+    display: none;
+} 
+.contentBx div.active{
+    display: block;
+    padding: 30px;
+    padding-left: 100px;
+    background: rgba(0,0,0, 0.2);
+}
+.contentBx div h2{
+    color: #fff;
+    font-size: 2em;
+}
+.contentBx div p{
+    color: #fff;
+    font-size: 1.em;
+    
+}
 .contentBx div a{
     color:#111;
     font-size: 1.1em;
@@ -271,6 +295,44 @@ header ul li a{
     cursor: pointer;
     color:black;
 }
+.signup{
+    padding: 9px 25px;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 50px;
+    color: white;
+    font-family: sans-serif;
+    cursor:pointer;
+}
+.exit{
+    padding: 9px 25px;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 50px;
+    color: white;
+    font-family: sans-serif;
+    cursor:pointer;
+}
+.exit1{
+    margin-top: 5px;
+    margin-left: 60px;
+    padding: 9px 25px;
+    background: transparent;
+    font-size: 22px;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+.loginR{
+    padding: 9px 25px;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 50px;
+    color: white;
+    font-family: sans-serif;
+    cursor:pointer;
+}
 footer{
     background-color:#24262b ;
 }
@@ -343,4 +405,10 @@ ul{
     color: #24262b;
     background-color: #fff;
     
+}
+.form{
+    display: none;
+}
+.form1{
+    display: none;
 }

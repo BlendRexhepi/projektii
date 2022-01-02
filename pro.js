@@ -120,3 +120,20 @@ registerButton.addEventListener("click", function (event) {
     }
   }
 });
+var x = document.getElementById("form1");
+var y = document.getElementById("form");
+
+function login(){
+    x.style.display = "none";
+    y.style.display = "block";      
+}    
+function signup(){
+y.style.display = "none";
+x.style.display = "block";
+}
+function exit(){
+    y.style.display = "none";    
+}
+function exit1(){
+    x.style.display = "none";    
+}

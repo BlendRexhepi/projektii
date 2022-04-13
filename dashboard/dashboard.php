@@ -48,3 +48,39 @@ include "../databaseconnection/db.php";
 } 
 
      ?>
+      </table> <br>
+
+<h3>Lista e Ofertave</h3>
+<table border="1">
+<tr>
+   <th>id</th>
+   <th>name</th>
+   <th>desc</th>
+   <th>cmimi</th>
+   <th>actions</th>
+</tr>
+<?php
+  $sql1 = "SELECT * FROM oferta";
+  $run = $conn->query($sql1);
+  if($run ->num_rows > 0){
+      while($row = $run ->fetch_assoc()){   
+?>
+<tr>
+   <td><?php echo $row['id']; ?></td>
+   <td><?php echo $row['name']; ?></td>
+   <td><?php echo $row['desc']; ?></td>
+   <td><?php echo $row['cmimi']; ?></td>
+   <td>
+        <a href="addOfert.php">shto Ofert</a>
+       <a href="editOferta.php?id=<?php echo $row['id']; ?>">edit</a>
+       <a href="deleteOferta.php?id=<?php echo $row['id']; ?>">delete</a>
+   </td>
+</tr>
+<br>
+
+<?php
+}
+} 
+
+?>      
+</table> 

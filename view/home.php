@@ -32,9 +32,9 @@ session_start();
             <li><a href="#">Home</a></li>
             <li><a href="#section1">About us</a></li>
             <li><a href="#section2">Contact us</a></li>
-            <li><a href="ofertat.php">Ofertat</a></li>
+            <li><a href="../oferta/oferta.php">Ofertat</a></li>
             <li><a class="<?php echo $hide?>" href="../dashboard/dashboard.php">Dashboard</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="../loginRegister/logout.php">Logout</a></li>
             <li><button class="loginR" onclick="login()" >log in/Register</button></li>
             
            

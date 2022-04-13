@@ -36,9 +36,9 @@ include "../databaseconnection/db.php";
         <td><?php echo $row['username']; ?></td>
         <td><?php echo $row['password']; ?></td>
         <td>
-            <a href="addUser.php">add</a>
-            <a href="editUser.php?id_user=<?php echo $row['id']; ?>">edit</a>
-            <a href="deleteUser.php?delete_id=<?php echo $row['id']; ?>">delete</a>
+            <a href="adduser.php">add</a>
+            <a href="edituser.php?id_user=<?php echo $row['id']; ?>">edit</a>
+            <a href="deletuser.php?delete_id=<?php echo $row['id']; ?>">delete</a>
         </td>
     </tr>
     <br>

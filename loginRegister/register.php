@@ -11,7 +11,7 @@
 
 
 <?php 
-include "../databaseconnection/databaseConnection.php";
+include "../databaseconnection/db.php";
 
 if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])){
     $name = $_POST['name'];

@@ -34,12 +34,12 @@ if(isset($_SESSION['username'])){
                 session_start();
                 $_SESSION['username']=$username;
                 $_SESSION['role']="admin";
-                header("location:home.php");
+                header("location:../view/home.php");
             }elseif($username == "nn" && $password=="nn"){
                 session_start();
                 $_SESSION['username']=$username;
                 $_SESSION['role']="user";
-                header("location:home.php");
+                header("location:../view/home.php");
             }else{
                 echo "Username incorrect";
             }

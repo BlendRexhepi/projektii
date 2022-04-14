@@ -30,7 +30,7 @@ session_start();
         <a href="#" class="logo">FlyWithMe.</a> 
         <ul id>
             <li><a href="#">Home</a></li>
-            <li><a href="#section1">About us</a></li>
+            <li><a href="../About us/about.php">About us</a></li>
             <li><a href="#section2">Contact us</a></li>
             <li><a href="../oferta/oferta.php">Ofertat</a></li>
             <li><a class="<?php echo $hide?>" href="../dashboard/dashboard.php">Dashboard</a></li>
@@ -104,15 +104,7 @@ session_start();
             <li onclick="nextSlide();nextSlideText()"></li>
         </ul>
     </section>
-       <div id="section1">
-            <div class="text">
-                <h1>About us</h1>
-                <p>FlyWithMe is a travel agnecy.<br>
-                   It offers travel packets in affordable prices for all clients   
-
-                </p>
-            </div>
-        </div>
+      
            
                <div id="section2">
                     <div class="textt">

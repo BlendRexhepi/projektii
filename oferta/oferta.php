@@ -53,7 +53,7 @@ include '../databaseconnection/db.php';
          <p> <?php echo $row['name']; ?></p>
             <h1>  <?php echo $row['desc'];  ?></h1> 
            <p><?php echo $row['cmimi']; ?></p>
-                <a href="">rezervo</a>
+                <a href="../bookings/rezervo.php">rezervo</a>
       </div>
     </div>
     

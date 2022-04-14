@@ -97,7 +97,7 @@ include "../databaseconnection/db.php";
         <th>actions</th>
     </tr>
     <?php
-       $sql = "SELECT * FROM booking";
+       $sql = "SELECT * FROM bookings";
        $run = $conn->query($sql);
        if($run ->num_rows > 0){
            while($row = $run ->fetch_assoc()){   

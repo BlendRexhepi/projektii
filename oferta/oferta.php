@@ -49,7 +49,7 @@ include '../databaseconnection/db.php';
     
     <div class="products">
       <div class="product">
-              <img src="cap.jpg"> 
+              <img src="../view/cap.jpg"> 
          <p> <?php echo $row['name']; ?></p>
             <h1>  <?php echo $row['desc'];  ?></h1> 
            <p><?php echo $row['cmimi']; ?></p>

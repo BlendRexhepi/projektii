@@ -16,6 +16,9 @@ if(isset($_SESSION['username'])){
     <title>Document</title>
 </head>
 <style>
+    body{
+     background-color: #92a8d1;
+    }
     .form{
     width: 300px;
     height: 380px;
@@ -38,7 +41,7 @@ if(isset($_SESSION['username'])){
     margin: 2px;
     padding: 8px;
 }
-.form input{
+ .f input{
     width: 240px;
     height: 35px;
     background: transparent;
@@ -63,33 +66,35 @@ if(isset($_SESSION['username'])){
     width: 240px;
     height: 40px;
     background: white;
-    border: none ;
     margin-top: 30px;
     font-size: 22px;
     border-radius: 10px;
     cursor: pointer;
-    color: black;
+    color:blue;
 }
 .btnn:hover{
     background: white;
     color: white;
 }
-.btnn a{
+.form a{
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: white;
 }
 </style>
 <body>
     <div class="form">
+        <div class="f">
         <h2>login here</h2>
     <form action="login.php" method="POST">
-        <input type="text" name="username"> <br> <br>
-        <input type="password" name="password"> <br> <br>
-        <input type="submit" name="loginBtn" value="Log In" class="btnn">
-        <a href="register.php" class="link">register</a>
+        <input type="text" name="username" placeholder="username"> 
+        <label style="color: white" for="username" id="usernameMsg"></label>
+        <input type="password" name="password" placeholder="password">
+        <label style="color: white"  for="password" id="passwordMsg"></label>
+        </div>
+        <input type="submit" name="loginBtn" value="Log In" class="btnn"><br>
+       <br> <a href="register.php" class="link">dont have an account? Register</a>
     </form>
-</div>
+    </div>
 
     <?php 
     if(isset($_POST['loginBtn'])){

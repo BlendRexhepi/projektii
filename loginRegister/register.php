@@ -6,7 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<style>
+   body{
+     background-color: #92a8d1;
+    }
+    .form{
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    position: absolute;
+    top: 80px;
+    right: 600px;
+    border-radius: 10px;
+    padding:25px ;
+
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: blue;
+    font-size: 22px; 
+    background-color: white ;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+ .f input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-right: none ;
+    border-left: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: white;
+    font-family:Arial ;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: white;
+    margin-top: 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    color:blue;
+}
+.btnn:hover{
+    background: white;
+    color: white;
+}
+.form a{
+    text-decoration: none;
+    color: white;
+}
+
+</style>
+
     
 
 
@@ -60,9 +127,6 @@ if($errorn!='name field is required' && $errors!='surname field is required' && 
 }
 ?>
 
-
-
-<div class="form1" id="form1" >
     <p style="color: red">
         <?php if(isset($errorn)){
             echo $errorn;
@@ -81,16 +145,26 @@ if($errorn!='name field is required' && $errors!='surname field is required' && 
         }
             ?>
     </p>
-    <form  method="post">
-            <h2>register Here</h2>
-            <input type="text" name="name" class="form" placeholder="name">
-            <input type="text" name="surname" class="form"  placeholder="surname">
-            <input type="text" name="email" class="form"  placeholder="email">
-            <input type="text" name="username" class="form"  placeholder="username">
-            <input type="password" name="password" class="form"  placeholder="password">
-            
 
-            <input type="submit" name="register" value="register">
+    <body>
+
+    <div class="form">
+        <div class="f">
+           <form  method="post">
+            <h2>register Here</h2>
+            <input type="text" name="name"  placeholder="name">
+            <label style="color: white" for="name" id="nameMsg"></label>>
+            <input type="text" name="surname"   placeholder="surname">
+            <label style="color: white" for="surname" id="surnameMsg"></label>
+            <input type="text" name="email"   placeholder="email">
+            <label style="color: white" for="email" id="emailMsg"></label>
+            <input type="text" name="username"  placeholder="username">
+            <label style="color: white" for="username" id="usernameeMsg"></label>
+            <input type="password" name="password"  placeholder="password">
+            <label style="color: white" for="password" id="passworddMsg"></label>
+            </div>
+           
+            <input type="submit" name="register" value="register" class="btnn">
 </form>
 </div>
 

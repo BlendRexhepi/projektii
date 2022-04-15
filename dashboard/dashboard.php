@@ -124,3 +124,102 @@ include "../databaseconnection/db.php";
 
      ?>
       </table> <br>
+      <h3>aboutus</h3>
+    <table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>desc</th>
+        <th>actions</th>
+    </tr>
+    <?php
+       $sql = "SELECT * FROM aboutus";
+       $run = $conn->query($sql);
+       if($run ->num_rows > 0){
+           while($row = $run ->fetch_assoc()){   
+    ?>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['name']; ?></td>
+        <td><?php echo $row['desc']; ?></td>
+  
+        <td>
+            <a href="../About us/add.php">add</a>
+            <a href="../About us/edit.php?id=<?php echo $row['id']; ?>">edit</a>
+            <a href="../About us/delete.php?id=<?php echo $row['id']; ?>">delete</a>
+        </td>
+    </tr>
+    <br>
+    
+<?php
+   }
+} 
+
+     ?>
+      </table> <br>
+      <h3>contactus</h3>
+    <table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>desc</th>
+        <th>actions</th>
+    </tr>
+    <?php
+       $sql = "SELECT * FROM contactus";
+       $run = $conn->query($sql);
+       if($run ->num_rows > 0){
+           while($row = $run ->fetch_assoc()){   
+    ?>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['name']; ?></td>
+        <td><?php echo $row['desc']; ?></td>
+  
+        <td>
+            <a href="../Contact us/add.php">add</a>
+            <a href="../Contact us/edit.php?id=<?php echo $row['id']; ?>">edit</a>
+            <a href="../Contact us/delete.php?id=<?php echo $row['id']; ?>">delete</a>
+        </td>
+    </tr>
+    <br>
+    
+<?php
+   }
+} 
+
+     ?>
+      </table> <br>
+      <h3>News</h3>
+    <table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>desc</th>
+        <th>actions</th>
+    </tr>
+    <?php
+       $sql = "SELECT * FROM  news";
+       $run = $conn->query($sql);
+       if($run ->num_rows > 0){
+           while($row = $run ->fetch_assoc()){   
+    ?>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['name']; ?></td>
+        <td><?php echo $row['desc']; ?></td>
+  
+        <td>
+            <a href="../news/add.php">add</a>
+            <a href="../news/edit.php?id=<?php echo $row['id']; ?>">edit</a>
+            <a href="../news/delete.php?id=<?php echo $row['id']; ?>">delete</a>
+        </td>
+    </tr>
+    <br>
+    
+<?php
+   }
+} 
+
+     ?>
+      </table> <br>

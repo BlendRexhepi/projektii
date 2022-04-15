@@ -104,17 +104,6 @@ session_start();
             <li onclick="nextSlide();nextSlideText()"></li>
         </ul>
     </section>
-      
-           
-               <div id="section2">
-                    <div class="textt">
-                        <h1>Contact us</h1>
-                        <p>For more information Contact us in options below<br>
-                        <pre>+3834555542    FlyWithMe@gmail.com</pre>  
-                        
-                        </p>
-                    </div>
-                </div>
     <footer class="footer">
         <div class="container">
             <div class="row">

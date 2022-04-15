@@ -104,12 +104,12 @@ if(isset($_SESSION['username'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
              
-            if($username == "bb" && $password=="bb"){
+            if($username == "blend21" && $password=="Blendi987*"){
                 session_start();
                 $_SESSION['username']=$username;
                 $_SESSION['role']="admin";
                 header("location:../view/home.php");
-            }elseif($username == "nn" && $password=="nn"){
+            }elseif($username == "erblin11" && $password=="Erblin123*"){
                 session_start();
                 $_SESSION['username']=$username;
                 $_SESSION['role']="user";

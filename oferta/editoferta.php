@@ -18,15 +18,16 @@ $run = $conn -> query($qry);
 if($run-> num_rows > 0){
     while($row = $run->fetch_assoc()){
         $name = $row['name'];
-        $desc = $row['desc'];
+        $description = $row['description'];
         $cmimi = $row['cmimi'];
+   
     }
 }
 ?>
 <form method="POST">
-            <input type="text" name="name" class="form"  value="<?php echo $name ?>"><br>
-            <input type="text" name="desc" class="form"   value="<?php echo $desc ?>"><br>
-            <input type="text" name="cmimi" class="form"   value="<?php echo $cmimi ?>"><br>
+            <input type="text" name="name"  value="<?php echo $name?>"><br>
+            <input type="text" name="description"   value="<?php echo $description ?>"><br>
+            <input type="text" name="cmimi"    value="<?php echo $cmimi ?>"><br>
              <input type="submit" value="update" name="update">
 </form>
        </body>
@@ -36,13 +37,14 @@ if($run-> num_rows > 0){
 
  if(isset($_POST['update'])){
      $name = $_POST['name'];
-     $desc = $_POST['desc'];
+     $description = $_POST['description'];
      $cmimi = $_POST['cmimi'];
 
-     $qry ="UPDATE oferta set name ='$name', desc = '$desc', cmimi ='$cmimi' WHERE id = $id";
 
-     if(mysqli_query($conn ,$qry)){
-         header('location:./dashboard/dashboard.php');
+     $qry ="UPDATE oferta set name ='$name', description='$description' WHERE id = $id";
+
+     if(mysqli_query($conn , $qry)){
+         header('location:../dashboard/dashboard.php');
      }else{
          echo "error";
      }

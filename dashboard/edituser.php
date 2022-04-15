@@ -45,7 +45,7 @@ if($run-> num_rows > 0){
      $username = $_POST['username'];
      $password = $_POST['password'];
 
-     $qry ="UPDATE user set name ='$name', surname = '$surname', email ='$email', username ='$username', password='$password' WHERE id_user = $id";
+     $qry ="UPDATE user set name ='$name', surname = '$surname', email ='$email', username ='$username', password='$password' WHERE id = $id";
 
      if(mysqli_query($conn ,$qry)){
          header('location:dashboard.php');

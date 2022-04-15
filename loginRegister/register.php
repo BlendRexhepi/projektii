@@ -12,7 +12,7 @@
     }
     .form{
     width: 300px;
-    height: 500px;
+    height: 550px;
     background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
     position: absolute;
     top: 80px;
@@ -152,21 +152,90 @@ if($errorn!='name field is required' && $errors!='surname field is required' && 
         <div class="f">
            <form  method="post">
             <h2>register Here</h2>
-            <input type="text" name="name"  placeholder="name">
+            <input type="text" name="name"  placeholder="name" id="name">
             <label style="color: white" for="name" id="nameMsg"></label>>
-            <input type="text" name="surname"   placeholder="surname">
+            <input type="text" name="surname"   placeholder="surname" id="surname">
             <label style="color: white" for="surname" id="surnameMsg"></label>
-            <input type="text" name="email"   placeholder="email">
+            <input type="text" name="email"   placeholder="email" id="email">
             <label style="color: white" for="email" id="emailMsg"></label>
-            <input type="text" name="username"  placeholder="username">
-            <label style="color: white" for="username" id="usernameeMsg"></label>
-            <input type="password" name="password"  placeholder="password">
-            <label style="color: white" for="password" id="passworddMsg"></label>
+            <input type="text" name="username"  placeholder="username" id="username">
+            <label style="color: white" for="username" id="usernameMsg"></label>
+            <input type="password" name="password"  placeholder="password" id="password">
+            <label style="color: white" for="password" id="passwordMsg"></label>
             </div>
            
-            <input type="submit" name="register" value="register" class="btnn">
+            <input type="submit" name="register" value="register" class="btnn" id="registerButton">
 </form>
 </div>
+<script>
+var registerButton = document.getElementById("registerButton");
+var nameMsg = document.getElementById("nameMsg");
+var surnameMsg = document.getElementById("surnameMsg");
+var emailMsg = document.getElementById("emailMsg");
+var usernameMsg = document.getElementById("usernameMsg");
+var passwordMsg = document.getElementById("passwordMsg");
 
+
+var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var usernameRegex = /\w+[._-]?\w+/;
+var passwordRegex = /^[A-Z][a-z]{5}\d{3}[!*._-]{1}/;
+
+registerButton.addEventListener("click", function (event) {
+  var name = document.getElementById("name").value;
+  var surname = document.getElementById("surname").value; 
+  var email = document.getElementById("email").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  if (name == "" || name == null) {
+    nameMsg.innerText = "* Please fill the name field";
+    event.preventDefault();
+  }
+  if (surname == "" || surname == null) {
+    surnameMsg.innerText = "* Please fill the surname field";
+    event.preventDefault();
+  }
+  //email validation
+  if (email == "" || email == null) {
+    emailMsg.innerText = "* Please fill the email field";
+    event.preventDefault();
+  } else {
+    if (emailRegex.test(email)) {
+      emailMsg.innerText = "";
+    } else {
+      emailMsg.innerText =
+        "* Please fill the email field correctly";
+      event.preventDefault();
+    }
+  }
+  if (username == "" || username == null) {
+    usernameMsg.innerText = "* Please fill the username field";
+    event.preventDefault();
+  } else {
+    if (usernameRegex.test(username)) {
+      usernameMsg.innerText = "";
+    } else {
+      usernameMsg.innerText =
+        "* Please fill the username field correctly (ex. john123, 123john, john_john, john.123 etc)";
+      event.preventDefault();
+    }
+  }
+
+  //password validation
+  if (password == "" || password == null) {
+    passwordMsg.innerText = "* Please fill the password field";
+    event.preventDefault();
+  } else {
+    if (passwordRegex.test(password)) {
+      passwordMsg.innerText = "";
+    } else {
+      passwordMsg.innerText =
+        "* Your password must contain  1 uppercase, 5 lowercase letters, 3 digits and 1 symbol [!*-_.]";
+      event.preventDefault();
+    }
+  }
+});
+
+</script>
 </body>
 </html>

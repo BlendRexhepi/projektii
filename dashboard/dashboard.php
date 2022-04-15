@@ -68,7 +68,7 @@ include "../databaseconnection/db.php";
 <tr>
    <td><?php echo $row['id']; ?></td>
    <td><?php echo $row['name']; ?></td>
-   <td><?php echo $row['desc']; ?></td>
+   <td><?php echo $row['description']; ?></td>
    <td><?php echo $row['cmimi']; ?></td>
    <td>
         <a href="../oferta/addoferta.php">shto Ofert</a>

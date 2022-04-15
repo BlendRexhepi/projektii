@@ -36,9 +36,7 @@ session_start();
             <li><a href="../oferta/oferta.php">Ofertat</a></li>
             <li><a class="<?php echo $hide?>" href="../dashboard/dashboard.php">Dashboard</a></li>
             <li><a href="../loginRegister/logout.php">Logout</a></li>
-            <li><button class="loginR" onclick="login()" >log in/Register</button></li>
-            
-           
+                
         </ul>  
        
     </header>
@@ -51,37 +49,6 @@ session_start();
             <img src="com.jpg">
 
         </div>
-    
-        <div class="form" id="form">
-            <input type="text" name="usernameL" id="username" placeholder="username">
-            <label style="color: white" for="username" id="usernameMsg"></label>
-            <input type="password" name="passwordL" id="password" placeholder="password">
-            <label style="color: white"  for="password" id="passwordMsg"></label>
-
-            <button class="btnn" type="button" id="loginButton" >login</button>
-           
-            <p class="link" style="color: white;">Dont have an account?<br>
-            <button class="signup" onclick="signup()" color white>signup</button>
-            <button class="exit" onclick="exit()">exit</button>
-    
-                   
-           </div>
-           <div class="form1" id="form1" >
-            <h2>register Here</h2>
-            <input type="text" name="name" id="name" placeholder="name">
-            <input type="text" name="email" id="email" placeholder="email">
-            <label style="color: white" for="email" id="emailMsg"></label>
-            <input type="text" name="username" id="usernamee" placeholder="username">
-            <label style="color: white" for="username" id="usernameeMsg"></label>
-            <input type="password" name="passwordL" id="passwordd" placeholder="password">
-            <label style="color: white" for="password" id="passworddMsg"></label>
-
-            <button class="btnn1" id="registerButton">register</button>
-            
-           
-            <button class="exit1" onclick="exit1()">exit</button>
-            
-           </div>
         <div class="contentBx">
             <div class="active">
                 <h2>OFERTE/Istanbul</h2>

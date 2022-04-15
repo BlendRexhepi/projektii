@@ -12,8 +12,8 @@ include '../databaseconnection/db.php';
 </head>
 <body>
 <form method="POST">
-    <input type="text" name="name" class="form" >
-    <input type="text" name="desc" class="form"  placeholder="name">
+    <input type="text" name="name" class="form" placeholder="name">
+    <input type="text" name="desc" class="form"  placeholder="desc">
     <input type="text" name="cmimi" class="form"  placeholder="cmimi">
     <input type="submit" value="submit" name="submit">
 </form>
@@ -21,13 +21,13 @@ include '../databaseconnection/db.php';
 
 <?php
 if(isset($_POST['submit'])){
-    $img = $_POST['name'];
-    $name = $_POST['desc'];
+    $name = $_POST['name'];
+    $desc = $_POST['desc'];
     $cmimi = $_POST['cmimi'];
     
     $qry ="INSERT INTO oferta values(null,'$name','$desc','$cmimi')";
     if(mysqli_query($conn, $qry)){
-        header('location:dashboard.php');
+        header('location:../dashboard/dashboard.php');
     }
     else{
         echo "error";

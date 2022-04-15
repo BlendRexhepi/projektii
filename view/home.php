@@ -31,7 +31,8 @@ session_start();
         <ul id>
             <li><a href="#">Home</a></li>
             <li><a href="../About us/about.php">About us</a></li>
-            <li><a href="#section2">Contact us</a></li>
+            <li><a href="../Contact us/contactus.php">Contact us</a></li>
+            <li><a href="../news/news.php">News</a></li>
             <li><a href="../oferta/oferta.php">Ofertat</a></li>
             <li><a class="<?php echo $hide?>" href="../dashboard/dashboard.php">Dashboard</a></li>
             <li><a href="../loginRegister/logout.php">Logout</a></li>
@@ -86,17 +87,17 @@ session_start();
                 <h2>OFERTE/Istanbul</h2>
                 <p>Perfitoni nga ofertat e fundit</p>
                 
-                <a href="#">ME SHUME</a>
+                <a href="../oferta/oferta.php">ME SHUME</a>
             </div>
             <div>
                 <h2>OFERTE/Capadocia</h2>
                 <p>Perfitoni nga ofertat e fundit</p>
-                <a href="#">ME SHUME</a>
+                <a href="../oferta/oferta.php">ME SHUME</a>
             </div>
             <div>
                 <h2>OFERTE/Maldive</h2>
                 <p>Perfitoni nga ofertat e fundit</p>
-                <a href="#">ME SHUME</a>
+                <a href="../oferta/oferta.php">ME SHUME</a>
             </div>
         </div>
         <ul class="controls">

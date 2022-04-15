@@ -86,12 +86,12 @@ if(isset($_SESSION['username'])){
         <div class="f">
         <h2>login here</h2>
     <form action="login.php" method="POST">
-        <input type="text" name="username" placeholder="username"> 
+        <input type="text" name="username" placeholder="username" id="username"> 
         <label style="color: white" for="username" id="usernameMsg"></label>
-        <input type="password" name="password" placeholder="password">
+        <input type="password" name="password" placeholder="password" id="password">
         <label style="color: white"  for="password" id="passwordMsg"></label>
         </div>
-        <input type="submit" name="loginBtn" value="Log In" class="btnn"><br>
+        <input type="submit" name="loginBtn" value="Log In" class="btnn" id="loginButton"><br>
        <br> <a href="register.php" class="link">dont have an account? Register</a>
     </form>
     </div>
@@ -121,6 +121,48 @@ if(isset($_SESSION['username'])){
     }
     
     ?>
+    <script>
+        var loginButton = document.getElementById("loginButton");
+
+var usernameMsg = document.getElementById("usernameMsg");
+var passwordMsg = document.getElementById("passwordMsg");
+
+var usernameRegex = /\w+[._-]?\w+/;
+var passwordRegex = /^[A-Z][a-z]{5}\d{3}[!*._-]{1}/;
+
+loginButton.addEventListener("click", function (event) {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  //username validation
+  if (username == "" || username == null) {
+    usernameMsg.innerText = "* Please fill the username field";
+    event.preventDefault();
+  } else {
+    if (usernameRegex.test(username)) {
+      usernameMsg.innerText = "";
+    } else {
+      usernameMsg.innerText =
+        "* Please fill the username field correctly";
+      event.preventDefault();
+    }
+  }
+
+  //password validation
+  if (password == "" || password == null) {
+    passwordMsg.innerText = "* Please fill the password field";
+    event.preventDefault();
+  } else {
+    if (passwordRegex.test(password)) {
+      passwordMsg.innerText = "";
+    } else {
+      passwordMsg.innerText =
+        "*Please fill the password field correctly";
+      event.preventDefault();
+    }
+  }
+});
+    </script>
 </body>
 </html>
 

@@ -37,7 +37,7 @@ include "../databaseconnection/db.php";
         <td><?php echo $row['password']; ?></td>
         <td>
             <a href="adduser.php">add</a>
-            <a href="edituser.php?id_user=<?php echo $row['id']; ?>">edit</a>
+            <a href="edituser.php?id=<?php echo $row['id']; ?>">edit</a>
             <a href="deletuser.php?delete_id=<?php echo $row['id']; ?>">delete</a>
         </td>
     </tr>
@@ -71,9 +71,9 @@ include "../databaseconnection/db.php";
    <td><?php echo $row['desc']; ?></td>
    <td><?php echo $row['cmimi']; ?></td>
    <td>
-        <a href="addOfert.php">shto Ofert</a>
-       <a href="editOferta.php?id=<?php echo $row['id']; ?>">edit</a>
-       <a href="deleteOferta.php?id=<?php echo $row['id']; ?>">delete</a>
+        <a href="../oferta/addoferta.php">shto Ofert</a>
+       <a href="../oferta/editoferta.php?id=<?php echo $row['id']; ?>">edit</a>
+       <a href="../oferta/deleteoferta.php?id=<?php echo $row['id']; ?>">delete</a>
    </td>
 </tr>
 <br>
@@ -111,9 +111,9 @@ include "../databaseconnection/db.php";
         <td><?php echo $row['phone_number']; ?></td>
         <td><?php echo $row['oferta']; ?></td>
         <td>
-            <a href="../booking/addbooking.php">add</a>
+            <a href="../bookings/addbooking.php">add</a>
             <a href="../bookings/editbooking.php?id=<?php echo $row['id']; ?>">edit</a>
-            <a href="deletuser.php?delete_id=<?php echo $row['id']; ?>">delete</a>
+            <a href="../bookings/deletebooking.php?delete_id=<?php echo $row['id']; ?>">delete</a>
         </td>
     </tr>
     <br>

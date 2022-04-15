@@ -13,20 +13,20 @@ include "../databaseconnection/db.php";
 
 <?php
 $id = $_GET['id'];
-$qry = "SELECT * FROM oferta where id ='$id'";
+$qry = "SELECT * FROM news where id ='$id'";
 $run = $conn -> query($qry);
 if($run-> num_rows > 0){
     while($row = $run->fetch_assoc()){
         $name = $row['name'];
         $desc = $row['desc'];
-        $cmimi = $row['cmimi'];
+     
     }
 }
 ?>
 <form method="POST">
             <input type="text" name="name" class="form"  value="<?php echo $name ?>"><br>
             <input type="text" name="desc" class="form"   value="<?php echo $desc ?>"><br>
-            <input type="text" name="cmimi" class="form"   value="<?php echo $cmimi ?>"><br>
+           
              <input type="submit" value="update" name="update">
 </form>
        </body>
@@ -37,9 +37,8 @@ if($run-> num_rows > 0){
  if(isset($_POST['update'])){
      $name = $_POST['name'];
      $desc = $_POST['desc'];
-     $cmimi = $_POST['cmimi'];
 
-     $qry ="UPDATE oferta set name ='$name', desc = '$desc', cmimi ='$cmimi' WHERE id = $id";
+     $qry ="UPDATE news set name ='$name', desc = '$desc' WHERE id = $id";
 
      if(mysqli_query($conn ,$qry)){
          header('location:./dashboard/dashboard.php');

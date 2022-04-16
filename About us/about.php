@@ -1,6 +1,7 @@
 <?php
-include '../databaseconnection/db.php';
 
+
+include "../header/header.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +33,8 @@ include '../databaseconnection/db.php';
 </style>
    <body>
        <?php
+       include '../databaseconnection/db.php';
+       
     $sql = "SELECT * FROM aboutus ";
     $run = $conn->query($sql);
     if($run ->num_rows > 0){

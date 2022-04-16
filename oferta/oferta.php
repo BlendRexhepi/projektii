@@ -1,4 +1,6 @@
 <?php
+include "../header/header.php";
+
 include '../databaseconnection/db.php';
 
 ?>
@@ -12,32 +14,40 @@ include '../databaseconnection/db.php';
     <style>
 
        *{
-            margin:0;
+            top: 0;
             padding:0;
         }
         body{
+           background:lightgray;
            width:100vw;
            height:100vh;
            flex-direction:row;
            display:flex;
         }
         .products{
+            margin-bottom:50px;
+            margin-top: 50px;
             width:30%;
             height:80%;
             margin-top:20px;
-            border:2px inset indigo;
+        
             display:flex;
             flex-direction:row;
         }
         .product{
            width:400px;
            min-height:40%;
-           border:2px inset lightgray;
+           border:2px inset black;
            display:flex;
            flex-direction:column;
            margin:50px;
         }
-         
+        .btn {
+           background-color: #199319;
+           color: white;
+           padding: 20px 150px;
+           text-decoration: none;
+        }
       
     </style>
    <body>
@@ -53,7 +63,7 @@ include '../databaseconnection/db.php';
               <h1><?php echo $row['name']; ?></h1>
               <p>  <?php echo $row['description'];  ?></p> 
            <p><?php echo $row['price']; ?></p>
-                <a href="../bookings/rezervo.php">rezervo</a>
+                <a class="btn" href="../bookings/rezervo.php">REZERVO</a>
       </div>
     </div>
     

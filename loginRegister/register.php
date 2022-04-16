@@ -153,7 +153,7 @@ if($errorn!='name field is required' && $errors!='surname field is required' && 
            <form  method="post">
             <h2>register Here</h2>
             <input type="text" name="name"  placeholder="name" id="name">
-            <label style="color: white" for="name" id="nameMsg"></label>>
+            <label style="color: white" for="name" id="nameMsg"></label>
             <input type="text" name="surname"   placeholder="surname" id="surname">
             <label style="color: white" for="surname" id="surnameMsg"></label>
             <input type="text" name="email"   placeholder="email" id="email">

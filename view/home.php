@@ -23,24 +23,10 @@ session_start();
         }
     </style>
 </head>
-
+<?php
+include "../header/header.php";
+?>
 <body>
-
-    <header>
-        <a href="#" class="logo">FlyWithMe.</a> 
-        <ul id>
-            <li><a href="#">Home</a></li>
-            <li><a href="../About us/about.php">About us</a></li>
-            <li><a href="../Contact us/contactus.php">Contact us</a></li>
-            <li><a href="../news/news.php">News</a></li>
-            <li><a href="../oferta/oferta.php">Ofertat</a></li>
-            <li><a class="<?php echo $hide?>" href="../dashboard/dashboard.php">Dashboard</a></li>
-            <li><a href="../loginRegister/logout.php">Logout</a></li>
-                
-        </ul>  
-       
-    </header>
-    
     <section class="banner">
        
         <div class="imgBx">

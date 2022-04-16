@@ -1,4 +1,7 @@
 <?php
+
+include "../header/header.php";
+
 include '../databaseconnection/db.php';
 
 ?>
@@ -40,7 +43,7 @@ include '../databaseconnection/db.php';
     <div id="section1">
             <div class="text">
                 <h1><?php echo $row['name'];?></h1>
-                <p>   <?php echo $row['desc'];?>  </p>
+                <p>   <?php echo $row['description'];?>  </p>
             </div>
         </div>
     

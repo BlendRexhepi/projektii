@@ -1,5 +1,8 @@
 <?php
+include "../header/header.php";
+
 include "../databaseconnection/db.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -10,9 +13,23 @@ include "../databaseconnection/db.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    *{
+        top:auto;
+        padding:0px;
+    }
+    body{
+        top:200px;
+        background:lightgray;
+    }
+</style>
 <body>
-    <h3>User List</h3>
     <table border="1">
+     <tr>
+         <th colspan="7">
+             User List
+         </th>
+     </tr>   
     <tr>
         <th>id</th>
         <th>name</th>
@@ -48,10 +65,14 @@ include "../databaseconnection/db.php";
 } 
 
      ?>
-      </table> <br>
+      </table> 
 
-<h3>Lista e Ofertave</h3>
-<table border="1">
+<table border="3">
+<tr>
+         <th colspan="5">
+             Lista ofertave
+         </th>
+     </tr> 
 <tr>
    <th>id</th>
    <th>name</th>
@@ -84,8 +105,12 @@ include "../databaseconnection/db.php";
 
 ?>      
 </table> 
-<h3>bookings</h3>
     <table border="1">
+    <tr>
+         <th colspan="8">
+             Bookings
+         </th>
+     </tr> 
     <tr>
         <th>id</th>
         <th>name</th>
@@ -124,8 +149,12 @@ include "../databaseconnection/db.php";
 
      ?>
       </table> <br>
-      <h3>aboutus</h3>
     <table border="1">
+    <tr>
+         <th colspan="4">
+             About us
+         </th>
+     </tr> 
     <tr>
         <th>id</th>
         <th>name</th>
@@ -157,8 +186,13 @@ include "../databaseconnection/db.php";
 
      ?>
       </table> <br>
-      <h3>contactus</h3>
+   
     <table border="1">
+    <tr>
+         <th colspan="4">
+             Contact us
+         </th>
+     </tr> 
     <tr>
         <th>id</th>
         <th>name</th>
@@ -190,8 +224,12 @@ include "../databaseconnection/db.php";
 
      ?>
       </table> <br>
-      <h3>News</h3>
     <table border="1">
+    <tr>
+         <th colspan="4">
+             News
+         </th>
+     </tr> 
     <tr>
         <th>id</th>
         <th>name</th>

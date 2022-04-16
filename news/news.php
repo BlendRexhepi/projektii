@@ -1,7 +1,5 @@
 <?php
 
-include "../header/header.php";
-
 include '../databaseconnection/db.php';
 
 ?>
@@ -14,6 +12,10 @@ include '../databaseconnection/db.php';
     <title>Document</title>
 </head>  
 <style>
+    *{
+    margin:0;
+    padding:0;
+     }
 
 #section1{
     position: relative;

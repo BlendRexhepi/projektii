@@ -1,7 +1,6 @@
 <?php
-include "../header/header.php";
-
 include '../databaseconnection/db.php';
+
 
 ?>
 <!DOCTYPE html>
@@ -13,9 +12,9 @@ include '../databaseconnection/db.php';
     <title>Document</title>
     <style>
 
-       *{
-            top: 0;
-            padding:0;
+        *{
+         margin:0;
+         padding:0;
         }
         body{
            background:lightgray;

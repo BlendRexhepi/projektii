@@ -1,7 +1,5 @@
 <?php
-
-
-include "../header/header.php";
+   include '../databaseconnection/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +10,10 @@ include "../header/header.php";
     <title>Document</title>
 </head>  
 <style>
-
+*{
+    margin:0;
+    padding:0;
+}
 #section1{
     position: relative;
     display: flex;
@@ -33,7 +34,7 @@ include "../header/header.php";
 </style>
    <body>
        <?php
-       include '../databaseconnection/db.php';
+    
        
     $sql = "SELECT * FROM aboutus ";
     $run = $conn->query($sql);

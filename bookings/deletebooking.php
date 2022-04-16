@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
     $query = mysqli_query($conn, "DELETE FROM bookings WHERE id = '$id'");
     if($query){
-     header("location:./dashboard/dashboard.php");
+     header("location:../dashboard/dashboard.php");
     }else{
      echo "<script>alert('Sorry delete query not work!')</script>";
     }

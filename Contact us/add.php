@@ -13,7 +13,7 @@ include '../databaseconnection/db.php'
 <body>
 <form method="POST">
     <input type="text" name="name" class="form" placeholder="name">
-    <input type="text" name="desc" class="form"  placeholder="desc">
+    <input type="text" name="description" class="form"  placeholder="desc">
     <input type="submit" value="submit" name="submit">
 </form>
 
@@ -21,10 +21,10 @@ include '../databaseconnection/db.php'
 <?php
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
-    $desc = $_POST['desc'];
+    $description = $_POST['description'];
 
     
-    $qry ="INSERT INTO contactus values(null,'$name','$desc')";
+    $qry ="INSERT INTO contactus values(null,'$name','$description')";
     if(mysqli_query($conn, $qry)){
         header('location:../dashboard/dashboard.php');
     }

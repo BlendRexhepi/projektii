@@ -38,7 +38,7 @@ include "../databaseconnection/db.php";
         <td>
             <a href="adduser.php">add</a>
             <a href="edituser.php?id=<?php echo $row['id']; ?>">edit</a>
-            <a href="deletuser.php?delete_id=<?php echo $row['id']; ?>">delete</a>
+            <a href="deleteuser.php?id=<?php echo $row['id']; ?>">delete</a>
         </td>
     </tr>
     <br>
@@ -69,7 +69,7 @@ include "../databaseconnection/db.php";
    <td><?php echo $row['id']; ?></td>
    <td><?php echo $row['name']; ?></td>
    <td><?php echo $row['description']; ?></td>
-   <td><?php echo $row['cmimi']; ?></td>
+   <td><?php echo $row['price']; ?></td>
    <td>
         <a href="../oferta/addoferta.php">shto Ofert</a>
        <a href="../oferta/editoferta.php?id=<?php echo $row['id']; ?>">edit</a>
@@ -108,12 +108,12 @@ include "../databaseconnection/db.php";
         <td><?php echo $row['surname']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td><?php echo $row['username']; ?></td>
-        <td><?php echo $row['phone_number']; ?></td>
-        <td><?php echo $row['oferta']; ?></td>
+        <td><?php echo $row['phone']; ?></td>
+        <td><?php echo $row['oferta_name']; ?></td>
         <td>
             <a href="../bookings/addbooking.php">add</a>
             <a href="../bookings/editbooking.php?id=<?php echo $row['id']; ?>">edit</a>
-            <a href="../bookings/deletebooking.php?delete_id=<?php echo $row['id']; ?>">delete</a>
+            <a href="../bookings/deletebooking.php?id=<?php echo $row['id']; ?>">delete</a>
         </td>
     </tr>
     <br>
@@ -141,7 +141,7 @@ include "../databaseconnection/db.php";
     <tr>
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['name']; ?></td>
-        <td><?php echo $row['desc']; ?></td>
+        <td><?php echo $row['description']; ?></td>
   
         <td>
             <a href="../About us/add.php">add</a>
@@ -174,7 +174,7 @@ include "../databaseconnection/db.php";
     <tr>
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['name']; ?></td>
-        <td><?php echo $row['desc']; ?></td>
+        <td><?php echo $row['description']; ?></td>
   
         <td>
             <a href="../Contact us/add.php">add</a>
@@ -207,7 +207,7 @@ include "../databaseconnection/db.php";
     <tr>
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['name']; ?></td>
-        <td><?php echo $row['desc']; ?></td>
+        <td><?php echo $row['description']; ?></td>
   
         <td>
             <a href="../news/add.php">add</a>

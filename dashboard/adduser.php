@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    $qry ="INSERT INTO user values(null,'$name','$surname','$email','$password','$password')";
+    $qry ="INSERT INTO user values(null,'$name','$surname','$email','$username','$password')";
     if(mysqli_query($conn, $qry)){
         header('location:dashboard.php');
     }

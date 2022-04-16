@@ -50,9 +50,9 @@ include '../databaseconnection/db.php';
     <div class="products">
       <div class="product">
               <img src="../view/cap.jpg"> 
-         <p> <?php echo $row['name']; ?></p>
-            <h1>  <?php echo $row['desc'];  ?></h1> 
-           <p><?php echo $row['cmimi']; ?></p>
+              <h1><?php echo $row['name']; ?></h1>
+              <p>  <?php echo $row['description'];  ?></p> 
+           <p><?php echo $row['price']; ?></p>
                 <a href="../bookings/rezervo.php">rezervo</a>
       </div>
     </div>

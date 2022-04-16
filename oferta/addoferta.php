@@ -13,8 +13,8 @@ include '../databaseconnection/db.php';
 <body>
 <form method="POST">
     <input type="text" name="name" class="form" placeholder="name">
-    <input type="text" name="desc" class="form"  placeholder="desc">
-    <input type="text" name="cmimi" class="form"  placeholder="cmimi">
+    <input type="text" name="description" class="form"  placeholder="description">
+    <input type="text" name="price" class="form"  placeholder="price">
     <input type="submit" value="submit" name="submit">
 </form>
 
@@ -22,10 +22,10 @@ include '../databaseconnection/db.php';
 <?php
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
-    $desc = $_POST['desc'];
-    $cmimi = $_POST['cmimi'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
     
-    $qry ="INSERT INTO oferta values(null,'$name','$desc','$cmimi')";
+    $qry ="INSERT INTO oferta values(null,'$name','$description','$price')";
     if(mysqli_query($conn, $qry)){
         header('location:../dashboard/dashboard.php');
     }

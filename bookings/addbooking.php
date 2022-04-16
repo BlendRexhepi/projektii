@@ -16,8 +16,8 @@ include '../databaseConnection/db.php'
     <input type="text" name="surname" class="form"  placeholder="surname">
     <input type="text" name="email" class="form"  placeholder="email">
     <input type="text" name="username" class="form"  placeholder="username">
-    <input type="text" name="phone_number" class="form"  placeholder="phone number">
-    <input type="text" name="oferta" class="form"  placeholder="oferta">
+    <input type="text" name="phone" class="form"  placeholder="phone number">
+    <input type="text" name="oferta_name" class="form"  placeholder="oferta">
     <input type="submit" value="submit" name="submit">
 </form>
 
@@ -28,10 +28,10 @@ if(isset($_POST['submit'])){
     $surname = $_POST['surname'];
     $email = $_POST['email'];
     $username = $_POST['username'];
-    $phonenumber = $_POST['phone_number'];
-    $oferta = $_POST['oferta'];
+    $phone = $_POST['phone'];
+    $oferta_name = $_POST['oferta_name'];
     
-    $qry ="INSERT INTO bookings values(null,'$name','$surname','$email','$username','$phonenumber','$oferta')";
+    $qry ="INSERT INTO bookings values(null,'$name','$surname','$email','$username','$phone','$oferta_name')";
     if(mysqli_query($conn, $qry)){
         echo'<script type="text/javascript">
           alert("booking succesfully")

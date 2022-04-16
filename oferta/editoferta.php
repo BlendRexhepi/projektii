@@ -19,7 +19,7 @@ if($run-> num_rows > 0){
     while($row = $run->fetch_assoc()){
         $name = $row['name'];
         $description = $row['description'];
-        $cmimi = $row['cmimi'];
+        $price = $row['price'];
    
     }
 }
@@ -27,7 +27,7 @@ if($run-> num_rows > 0){
 <form method="POST">
             <input type="text" name="name"  value="<?php echo $name?>"><br>
             <input type="text" name="description"   value="<?php echo $description ?>"><br>
-            <input type="text" name="cmimi"    value="<?php echo $cmimi ?>"><br>
+            <input type="text" name="price"    value="<?php echo $price?>"><br>
              <input type="submit" value="update" name="update">
 </form>
        </body>
@@ -38,10 +38,10 @@ if($run-> num_rows > 0){
  if(isset($_POST['update'])){
      $name = $_POST['name'];
      $description = $_POST['description'];
-     $cmimi = $_POST['cmimi'];
+     $price = $_POST['price'];
 
 
-     $qry ="UPDATE oferta set name ='$name', description='$description' WHERE id = $id";
+     $qry ="UPDATE oferta set name ='$name', description='$description', price='$price' WHERE id = $id";
 
      if(mysqli_query($conn , $qry)){
          header('location:../dashboard/dashboard.php');
